@@ -1,0 +1,15 @@
+2025-06-25 17:58:50,527 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 17:59:20,280 - INFO - [WHITELIST] Conexão permitida do IP: 127.0.0.1
+2025-06-25 17:59:24,516 - INFO - [WHITELIST] Conexão permitida do IP: 127.0.0.1
+2025-06-25 17:59:24,530 - INFO - Honeypot parado pelo utilizador.
+2025-06-25 18:00:47,543 - INFO - Honeypot parado pelo utilizador.
+2025-06-25 18:01:05,418 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 18:01:11,557 - INFO - [WHITELIST] Conexão permitida do IP: 127.0.0.1
+2025-06-25 18:01:18,174 - INFO - [WHITELIST] Conexão permitida do IP: 127.0.0.1
+2025-06-25 18:01:18,177 - INFO - Honeypot parado pelo utilizador.
+2025-06-25 18:01:19,554 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 18:01:29,371 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 18:01:44,168 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1
+2025-06-25 18:01:49,164 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1
+2025-06-25 18:01:54,938 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1
+2025-06-25 18:01:54,966 - INFO - Honeypot parado pelo utilizador.
