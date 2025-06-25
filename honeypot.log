@@ -13,3 +13,7 @@
 2025-06-25 18:01:49,164 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1
 2025-06-25 18:01:54,938 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1
 2025-06-25 18:01:54,966 - INFO - Honeypot parado pelo utilizador.
+2025-06-25 20:26:35,475 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 20:27:54,203 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 20:30:16,741 - INFO - Honeypot iniciado pelo utilizador.
+2025-06-25 20:30:42,087 - INFO - [FIREWALL] Conexão bloqueada do IP: 127.0.0.1

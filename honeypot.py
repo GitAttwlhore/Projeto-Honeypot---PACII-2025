@@ -31,7 +31,7 @@ ABUSE_API_KEY = "ede0725a53bb9dec61a8a3bcaf31bc38ab58389cb572c33a8793e36ac43f8e8
 BLOCK_THRESHOLD = 50
 
 # IPs que nunca serão bloquados pelo programa;
-WHITELIST = ["127.0.0.1","10.0.2.15"]
+WHITELIST = []
 
 
 # Bloco de Funções da Firewall Dinâmica:
