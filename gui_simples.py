@@ -6,6 +6,7 @@
 import tkinter as tk
 from honeypot import HoneypotSSH
 import threading
+import logging
 
 # Bloco da Interface Gráfica:
 # Define a Interface Gráfica para controlar o programa "Honeypot.py";
@@ -14,8 +15,8 @@ class SimpleGUI(tk.Tk):
         
         # Criação da janela da interface gráfica e todos os seus elementos;
         super().__init__()
-        self.title("Honeypot Simples")
-        self.geometry("500x300")
+        self.title("Interface Gráfica - Honeypot Simples")
+        self.geometry("1024x768")
 
         # Whitelist do Honeypot;
         self.whitelist = ["127.0.0.1", "10.0.2.15"]
@@ -50,11 +51,13 @@ class SimpleGUI(tk.Tk):
             self.honeypot_thread = threading.Thread(target=self.honeypot.start, daemon=True)
             self.honeypot_thread.start()
             self.log_message("[GUI] Honeypot iniciado.")
+            logging.info("Honeypot iniciado pelo utilizador.")
 
     # Sinaliza ao honeypot para parar de correr;
     def stop_honeypot(self):
         self.honeypot.stop()
         self.log_message("[GUI] Honeypot parado.")
+        logging.info("Honeypot parado pelo utilizador.")
 
 if __name__ == "__main__":
     app = SimpleGUI()

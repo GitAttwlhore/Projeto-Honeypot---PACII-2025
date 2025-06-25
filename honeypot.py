@@ -9,6 +9,18 @@ import threading # Biblioteca de gestão do servidor (Confirmar porque acho que 
 import json # Biblioteca utilizada para guardar os logs;
 import requests # Biblioteca de requestes à API;
 from datetime import datetime # Biblioteca - Data e Hora dos logs guardados;
+import logging # <--- ADICIONA ESTA LINHA
+
+
+# Bloco de configuração do Logger
+# Isto irá configurar um logger que escreve para um ficheiro chamado honeypot.log
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='honeypot.log',
+    filemode='a' # 'a' para adicionar ao ficheiro, 'w' para escrever de novo a cada execução
+)
+# Fim do bloco de configuração do Logger
 
 
 # Bloco de variáveis e configurações globais do programa:
@@ -220,14 +232,18 @@ class HoneypotSSH:
 
             # A cadeia de filtros é idêntica à função main mas desta vez com LOGGING para a Interface Gráfica;
                 if ip in WHITELIST:
+                    message = f"[WHITELIST] Conexão permitida do IP: {ip}"
+                    logging.info(message)
                     if self.gui:
-                        self.gui.log_message(f"[!] Conexão ignorada (whitelist): {ip}")
+                        self.gui.log_message(message)
                     client_socket.close()
                     continue
 
                 if firewall.verificar_bloqueio(ip):
+                    message = f"[FIREWALL] Conexão bloqueada do IP: {ip}"
+                    logging.info(message)
                     if self.gui:
-                        self.gui.log_message(f"[!] Conexão bloqueada (firewall): {ip}")
+                        self.gui.log_message(message)
                     client_socket.close()
                     continue
 
